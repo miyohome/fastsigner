@@ -1,0 +1,32 @@
+plugins {
+    id 'java'
+}
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+}
+
+// 定义项目的编码属性
+project.ext {
+    javaEncoding = 'UTF-8'
+}
+
+// 配置Java编译选项
+tasks.withType(JavaCompile) {
+    options.encoding = project.javaEncoding
+    sourceCompatibility = JavaVersion.VERSION_1_8
+    targetCompatibility = JavaVersion.VERSION_1_8
+}
+
+jar {
+    // 配置JAR文件的名称和版本
+    archiveBaseName = 'fastsinger'
+    archiveVersion = '1.1.0'
+    manifest {
+        attributes 'Main-Class': 'com.miyo.AndroidSigningSuite' // 替换为你的主类名
+    }
+}

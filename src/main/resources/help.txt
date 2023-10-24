@@ -1,0 +1,17 @@
+USAGE: fastsinger <command> [options]
+       fastsinger --version
+       fastsinger --help
+
+EXAMPLE:
+       fastsinger zipalign --help
+       fastsinger keytool  --help
+       fastsinger fastsign --help
+
+fastsinger is a tool for signing Android APK files.
+
+
+        COMMANDS
+version               Show this tool's version number and exit
+
+help                  Show this usage page and exit
+
